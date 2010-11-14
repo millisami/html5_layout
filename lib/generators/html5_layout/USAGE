@@ -1,5 +1,8 @@
 Description:
     This generates the layout file based upon the HTML5 Boilerplate (http://github.com/paulirish/html5-boilerplate) code.
+    The generator takes one argument which will be the name of the
+  	layout and stylesheet files. If no argument is passed then it defaults
+  	to "application".
 
 Help:
     rails g html5_layout -h
