@@ -1,0 +1,17 @@
+Description:
+    This generates the layout file based upon the HTML5 Boilerplate (http://github.com/paulirish/html5-boilerplate) code.
+
+Help:
+    rails g html5_layout -h
+    
+Example:
+    rails generate html5_layout admin
+
+    This will create:
+        create  public/stylesheets/admin.css
+        create  public/stylesheets/handheld.css
+        create  public/javascripts/modernizr-1.5.min.js
+        create  public/javascripts/jquery-1.4.2.min.js
+        create  public/javascripts/dd_belatedpng.js
+        create  app/views/layouts/admin.html.erb
+  
