@@ -1,0 +1,63 @@
+@import "compass"
+@import "compass/css3"
+@import "html5_reset"
+@import "960/grid"
+@import "text"
+
+/* App specific Custom styles */
+$ninesixty-gutter-width: 12px
+$ninesixty-grid-width: 960px
+$ninesixty-columns: 16
+
+$font-color:         #2a2a2a
+$link-color:         #0388a6
+$link-hover-color:   #009ce0
+$link-focus-color:   $link-color
+$link-active-color:  $link-color
+$link-visited-color: $link-color
+
++text
+// +font-face("Museo 300", font-files("/fonts/Museo300-Regular.otf", opentype))
+// +font-face("Museo 500", font-files("/fonts/Museo500-Regular.otf", opentype))
+// +font-face("Museo 700", font-files("/fonts/Museo700-Regular.otf", opentype))
+
+a
+  +link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color)
+  &:link, &:active
+    text-decoration: none
+  &:hover
+    text-decoration: underline
+
+body
+  background-color: #067851
+  +text-shadow(rgba(0,0,0,0.3), 1px, 1px, 0px)
+  padding: 10px 0px
+
+#container
+  +grid-container
+  +clearfix
+  background: #fff
+  +border-radius(8px)
+#main
+  +grid(16)
+  table
+    tr
+      margin-bottom: 5px
+      th
+        font-size: 1.2em
+        padding-bottom: 8px
+      td
+        padding-right: 10px
+        padding-bottom: 5px
+  form
+    .field
+      margin-bottom: 5px
+    .actions
+      margin-bottom: 5px
+header
+  +grid(16)
+  height: 30px
+  margin-bottom: 10px
+footer
+  +grid(16)
+  height: 40px
