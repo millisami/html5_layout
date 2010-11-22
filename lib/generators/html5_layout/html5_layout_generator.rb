@@ -12,11 +12,10 @@ class Html5LayoutGenerator < Rails::Generators::Base
 
   def generate_layout
     if options.sass?
-      # copy_file "stylesheet.sass", "public/stylesheets/#{file_name}.css" if options.stylesheet?
       directory 'app'
       gem 'compass', '>=0.10.5'
       gem 'compass-960-plugin', '>=0.10.0'
-      copy_file "compass.rb", "config/compass.rb"
+      directory 'config'
     else
       copy_file "stylesheet.css", "public/stylesheets/#{file_name}.css" if options.stylesheet?
       copy_file "handheld.css", "public/stylesheets/handheld.css" if options.stylesheet?
@@ -33,5 +32,9 @@ class Html5LayoutGenerator < Rails::Generators::Base
   
   def file_name
     layout_name.underscore
+  end
+  
+  def app_name
+    Rails.application.class.name
   end
 end
