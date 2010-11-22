@@ -7,7 +7,8 @@ class Html5LayoutGenerator < Rails::Generators::Base
 	
   argument :layout_name, :type => :string, :default => "application"
   class_option :stylesheet, :type => :boolean, :default => true, :desc => "Include stylesheet file"
-  class_option :sass, :type => :boolean, :default => false, :desc => "Include the SASS version for CSS"
+  class_option :sass, :type => :boolean, :desc => "Include the SASS version for CSS"
+  # class_option :haml, :type => :boolean, :desc => "Include the SASS version for CSS"
 
   def generate_layout
     if options.sass?
@@ -25,6 +26,7 @@ class Html5LayoutGenerator < Rails::Generators::Base
     copy_file "dd_belatedpng.js", "public/javascripts/dd_belatedpng.js"
 
     template "layout.html.erb", "app/views/layouts/#{file_name}.html.erb"
+    copy_file 'layout_helper.rb', 'app/helpers/layout_helper.rb'
   end
   
   private

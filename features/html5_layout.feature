@@ -15,6 +15,7 @@ Feature: HTML5 Boilerplate Layout Generator
     And I should see file "public/javascripts/dd_belatedpng.js"
     And I should see file "public/javascripts/jquery-1.4.2.min.js"
     And I should see file "public/javascripts/modernizr-1.5.min.js"
+    And I should see file "app/helpers/layout_helper.rb"
     
   Scenario: Generate named layout
     Given a new Rails app
@@ -22,14 +23,13 @@ Feature: HTML5 Boilerplate Layout Generator
     Then I should see "stylesheet_link_tag "foo"" in file "app/views/layouts/foo.html.erb"
     And I should see "stylesheet_link_tag "handheld"" in file "app/views/layouts/foo.html.erb"
     And I should see file "public/stylesheets/foo.css"
+    And I should see file "app/helpers/layout_helper.rb"
 
   Scenario: Generate normal application layout with the sass option
     Given a new Rails app
     When I run "rails g html5_layout -f --sass"
     Then I should see "stylesheet_link_tag "application"" in file "app/views/layouts/application.html.erb"
     And I should see "stylesheet_link_tag "handheld"" in file "app/views/layouts/application.html.erb"
-    # And I should see file "app/helpers/layout_helper.rb"
-    # And I should see file "app/helpers/error_messages_helper.rb"
     And I should see file "app/stylesheets/application.sass"
     And I should see file "app/stylesheets/handheld.sass"
     And I should see file "config/compass.rb"
@@ -38,3 +38,4 @@ Feature: HTML5 Boilerplate Layout Generator
     And I should see file "public/javascripts/dd_belatedpng.js"
     And I should see file "public/javascripts/jquery-1.4.2.min.js"
     And I should see file "public/javascripts/modernizr-1.5.min.js"
+    And I should see file "app/helpers/layout_helper.rb"

@@ -1,8 +1,6 @@
 Description:
     This generates the layout file based upon the HTML5 Boilerplate (http://github.com/paulirish/html5-boilerplate) code.
-    The generator takes one argument which will be the name of the
-  	layout and stylesheet files. If no argument is passed then it defaults
-  	to "application".
+    The generator takes one argument which will be the name of the layout and stylesheet files. If no argument is passed then it defaults to "application".
 
 Help:
     rails g html5_layout -h
@@ -18,3 +16,7 @@ Example:
         create  public/javascripts/dd_belatedpng.js
         create  app/views/layouts/admin.html.erb
   
+    rails g html5_layout --sass
+    
+    This will add two gems, compass and compass-960-plugin, in the Gemfile. So, you need to run `bundle install`.
+    The generator will also add layout helpers to use. 
