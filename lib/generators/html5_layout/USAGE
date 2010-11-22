@@ -19,4 +19,4 @@ Example:
     rails g html5_layout --sass
     
     This will add two gems, compass and compass-960-plugin, in the Gemfile. So, you need to run `bundle install`.
-    The generator will also add layout helpers to use. 
+    The generator will also add layout helpers to use.
